@@ -1,13 +1,10 @@
-/* =========================================================
-   1. ESTILS BASE DE L'ACTIVITAT 2
-   ========================================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Fons groc del model */
+/* Fons groc */
 body {
     background-color: #ffff00;
     font-family: Arial, Helvetica, sans-serif;
@@ -164,37 +161,35 @@ p {
     height: 45px;
 }
 
-
-/* =========================================================
-   2. NOVES REGLES D'ESTILS I CORRECCIONS ACTIVITAT 3
-   ========================================================= */
-
-/* Structura Flexbox en 2 columnes per a la pàgina d'arcs */
+/* Disposició Flexbox en 2 columnes */
 .contenidor-arcs {
-    display: flex;
+    display: flex; /* Activa el model Flexbox */
     gap: 20px;
     align-items: flex-start;
 }
 
 .columna-llista-arcs {
-    flex: 1;
+    flex: 1; /* Primera columna: ocupa l'espai restant de la llista */
 }
 
 .columna-imatges-arcs {
-    width: 350px;
+    flex: 1; /* Segona columna per a les imatges */
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
 
+/* Regla per a les imatges de 650x800 px */
 .columna-imatges-arcs img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     border: 1px solid #cccccc;
+    object-fit: cover;
 }
 
-/* Icona icono-cine.png NOMÉS per a la llista principal de Sagues */
+/* Icona icono-cine.png */
 ul.llista-sagues {
     list-style-image: url('img/icono-cine.png');
     margin-left: 20px;
@@ -206,8 +201,7 @@ ul.llista-sagues > li {
     margin-bottom: 12px;
 }
 
-/* Correcció: eliminem la icona de la tira de cine de les llistes anidades (ol) 
-   i forcem la numeració normal (1, 2, 3...) */
+/* Correcció: eliminem la icona de la tira de cine de les llistes anidades i forcem la numeració normal (1, 2, 3) */
 ul.llista-sagues ol {
     list-style-image: none !important;
     list-style-type: decimal !important;
@@ -222,7 +216,7 @@ ul.llista-sagues ol li {
     margin-bottom: 3px;
 }
 
-/* Llista no ordenada d'índex de personatges amb circlets (circle) */
+/* Llista no ordenada d'índex de personatges amb cercles */
 ul.index-personatges {
     list-style-type: circle;
     margin-left: 25px;
