@@ -1,0 +1,285 @@
+/* =========================================================
+   1. ESTILS BASE DE L'ACTIVITAT 2
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fons groc del model */
+body {
+    background-color: #ffff00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* Capçalera grisa */
+.capcalera-principal {
+    background-color: #555555;
+    text-align: center;
+    padding-top: 8px;
+    border-bottom: 2px solid #333333;
+}
+
+.logo-superior img {
+    height: 38px;
+}
+
+/* Menú de navegació */
+.menu-navegacio {
+    background-color: #444444;
+    margin-top: 6px;
+    padding: 4px 0;
+}
+
+.menu-navegacio ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-navegacio a {
+    color: #ff9900;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.menu-navegacio a:hover,
+.menu-navegacio a.actiu {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Caixa central blanca */
+.contenidor-centrat {
+    width: 780px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px 35px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-size: 22px;
+    color: #111111;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 16px;
+    color: #111111;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* Metadata i xarxes socials */
+.meta-article {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.meta-article img {
+    height: 16px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Imatge de One Piece */
+.imatge-principal {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.imatge-principal img {
+    width: 420px;
+    max-width: 100%;
+    border: 1px solid #cccccc;
+}
+
+/* Tweet */
+.contenidor-tweet {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+/* Llista de curiositats */
+.llista-curiositats {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.llista-curiositats li {
+    margin-bottom: 6px;
+}
+
+/* Enllaços inferiors */
+.link-wiki {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-wiki:hover {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.enllacos-inferiors p {
+    margin-bottom: 6px;
+}
+
+/* Peu lila de Fandom */
+.peu-fandom {
+    background-color: #9955bb;
+    padding: 25px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 0;
+}
+
+.logo-fandom {
+    height: 45px;
+}
+
+.logo-op {
+    height: 45px;
+}
+
+
+/* =========================================================
+   2. NOVES REGLES D'ESTILS I CORRECCIONS ACTIVITAT 3
+   ========================================================= */
+
+/* Structura Flexbox en 2 columnes per a la pàgina d'arcs */
+.contenidor-arcs {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.columna-llista-arcs {
+    flex: 1;
+}
+
+.columna-imatges-arcs {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.columna-imatges-arcs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #cccccc;
+}
+
+/* Icona icono-cine.png NOMÉS per a la llista principal de Sagues */
+ul.llista-sagues {
+    list-style-image: url('img/icono-cine.png');
+    margin-left: 20px;
+}
+
+ul.llista-sagues > li {
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 12px;
+}
+
+/* Correcció: eliminem la icona de la tira de cine de les llistes anidades (ol) 
+   i forcem la numeració normal (1, 2, 3...) */
+ul.llista-sagues ol {
+    list-style-image: none !important;
+    list-style-type: decimal !important;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #000000;
+}
+
+ul.llista-sagues ol li {
+    margin-bottom: 3px;
+}
+
+/* Llista no ordenada d'índex de personatges amb circlets (circle) */
+ul.index-personatges {
+    list-style-type: circle;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+ul.index-personatges li {
+    margin-bottom: 4px;
+}
+
+/* Enllaços de text de color taronja per a personatges i arcs */
+a.link-taronja,
+ul.index-personatges a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.link-taronja:hover,
+ul.index-personatges a:hover {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+/* Secció de personatges amb imatge centrada i botó */
+.bloc-personatge {
+    margin-bottom: 30px;
+}
+
+.bloc-personatge h2 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+.bloc-personatge img {
+    display: block;
+    margin: 10px auto;
+    max-height: 160px;
+    width: auto;
+}
+
+.contenidor-boto-més {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.boto-saber-mes {
+    display: inline-block;
+    background-color: #666666;
+    color: #ffffff !important;
+    padding: 3px 12px;
+    font-size: 11px;
+    text-decoration: none !important;
+    border-radius: 2px;
+}
+
+.boto-saber-mes:hover {
+    background-color: #333333;
+}
